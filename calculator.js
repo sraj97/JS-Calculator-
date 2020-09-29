@@ -18,11 +18,11 @@
 
 let restart = "yes".toLowerCase() || "no".toLowerCase();
 while (restart === "yes".toLowerCase()) {
-    const typeOfCalc = prompt("Please choose, Main, Advanced or Loan");
+    const typeOfCalc = prompt("Please choose, Main, Advanced or Loan").toLowerCase();
 
     switch (typeOfCalc) {
-        case "Main".toLowerCase() :
-        case "Advanced".toLowerCase(): 
+        case "main" :
+        case "advanced": 
             let firstNumber = Number(prompt("First number:"));
             const operator = prompt("Operator: (please choose +, -, /, *, sqrt, power".toLowerCase());
             if (operator !== "sqrt".toLowerCase() && operator !== "power".toLowerCase()) {
@@ -46,7 +46,7 @@ while (restart === "yes".toLowerCase()) {
             }
         break;
 
-        case "Loan".toLowerCase():
+        case "loan":
             let loanAmount = Number(prompt("How much do you want to lend? (Please write full numbers without any currency tags)"));
             alert("You will pay back £" + (loanAmount * 1.35) + ".");
             break;
@@ -55,7 +55,7 @@ while (restart === "yes".toLowerCase()) {
             alert("Nothing picked!")
             break;
     }
-    restart = prompt("Do you want to restart?".toLowerCase());
+    restart = prompt("Do you want to restart?");
 }
 
 
